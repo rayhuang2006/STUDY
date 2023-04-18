@@ -1,12 +1,10 @@
-# STUDY
-An IOS application, that can show the vote status. 
+
 STUDY
 =============
 
-FUNCTIONS
--------------
+#FUNCTIONS
 
-# User list
+## User list
 
 The "User list" is a feature of the app that provides a way for users to keep track of each other's scores and to view each other's real names and nicknames. The user list is implemented as a list of users, where each user has a real name, a nickname, and a score. The user list is managed by the UserListViewModel class, which provides methods to add, remove, and retrieve users.
 
@@ -16,7 +14,7 @@ The user list serves as the foundation for the app's social aspect, as it allows
 
 Overall, the "User list" feature is an essential component of the app, as it provides a way for users to connect with each other and to engage in friendly competition.
 
-# Scores
+## Scores
 
 The "Scores" feature of the app provides a way for users to keep track of their scores and to view the scores of other users. It is implemented as a User class, which represents a user in the app and includes the user's name, nickname, and score.
 
@@ -28,7 +26,7 @@ The "Scores" feature encourages users to engage with the app and to compete with
 
 Overall, the "Scores" feature is an important part of the app, as it motivates users to participate and engage with the app, and it provides a way to recognize and appreciate each other's contributions.
 
-# Voting 
+## Voting 
 
 The "Voting" feature of the app is a way for users to vote for each other and to receive votes from other users. It is implemented as a VotingViewModel class, which manages the voting process and the list of votes.
 
@@ -42,4 +40,4 @@ The "Voting" feature encourages users to engage with each other and to show appr
 
 Overall, the "Voting" feature is an important component of the app, as it promotes social interaction and friendly competition among users.
 
-###(This application is now only testing version)
+# (This application is now only testing version)
