@@ -7,6 +7,8 @@ IOS application. I do this for my classmates. Maybe there will soon be android v
 
 # Functions
 
+All the functionality in this program.
+
 ## User list
 
 The "User list" is a feature of the app that provides a way for users to keep track of each other's scores and to view each other's real names and nicknames. The user list is implemented as a list of users, where each user has a real name, a nickname, and a score. The user list is managed by the UserListViewModel class, which provides methods to add, remove, and retrieve users.
