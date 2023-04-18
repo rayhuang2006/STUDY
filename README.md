@@ -2,7 +2,7 @@
 STUDY
 =============
 
-IOS application. I wrote it for my classmates
+IOS application. I do this for my classmates. Maybe there will soon be android version release.
 
 
 # Functions
