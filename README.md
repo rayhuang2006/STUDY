@@ -7,7 +7,7 @@ IOS application. I do this for my classmates. Maybe there will soon be android v
 
 # Functions
 
-All the functionality in this program.
+All the functionality in this program are bellow. (Everything is still testing. If there is anything wrong, this is normal.)
 
 ## User list
 
