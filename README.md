@@ -2,6 +2,8 @@
 STUDY
 =============
 
+IOS application. I wrote it for my classmates
+
 
 # Functions
 
