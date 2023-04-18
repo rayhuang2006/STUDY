@@ -2,7 +2,8 @@
 STUDY
 =============
 
-#FUNCTIONS
+
+# Functions
 
 ## User list
 
