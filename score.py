@@ -70,8 +70,20 @@ def queryUserScore(id):
         cursor.close()
         return 0
 
-    cursor.close()
     return result[1], result[2]
+
+def queryUserRecords(id):
+    """
+    Error code 0: no record
+    """
+    cursor = db.cursor()
+    cursor.execute("SELECT detailed, score, date FROM form2 WHERE id=?", (id,))
+    result = cursor.fetchall()
+    if not len(result):
+        cursor.close()
+        return 0
+
+    return result
 
 def main():
     fit()
@@ -83,6 +95,7 @@ def main():
     anu -id -name
     aur -id -score -desc -date
     qus -id
+    qur -id
     """
     flag = True 
     while(flag):
@@ -125,10 +138,22 @@ def main():
                     continue
                 
                 print("[{}]{} > {}".format(_cmd[1], res[0], res[1]))
+        elif _cmd[0] == "qur":
+            if len(_cmd) != 2:
+                print("Missing args({})".format(len(_cmd)))
+                continue
+            else:
+                res = queryUserRecords(_cmd[1])
+                if res == 0:
+                    print("No reord")
+                
+                for record in res:
+                    print("[{}] +{} : {}".format(record[0], record[1], record[2]))
+                print("Total: {}".format(len(res)))
         elif _cmd[0] == "exit":
             flag = False
         else:
             print("Unknown command \"{}\"".format(_cmd[0]))
-            
+
 if __name__ == "__main__":
     main()
