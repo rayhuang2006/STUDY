@@ -4,6 +4,8 @@ STUDY
 
 IOS application. I do this for my classmates. Maybe there will soon be android version released.
 
+Maybe there will soon bo on the website. The fuctionality might be very different.
+
 
 # Functions
 
