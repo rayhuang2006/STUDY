@@ -129,5 +129,6 @@ def main():
             flag = False
         else:
             print("Unknown command \"{}\"".format(_cmd[0]))
-
-main()
+            
+if __name__ == "__main__":
+    main()
