@@ -39,7 +39,7 @@
 .content {
     background-color: #1e1e1e;
     position: absolute;
-    height: fit-content;
+    height: calc(150% - 78px);
     width: calc(100% - 78px);
     transition: width 0.5s ease;
     transition: left 0.5s ease;
