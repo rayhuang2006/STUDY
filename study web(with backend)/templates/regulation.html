@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>搶救學分大作戰</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/based.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/sidebar.css') }}" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" />
-    </head>
-    <!-- A place where you shouldn't be. -->
-    <body>
-        <div id="sidebar-block"></div>
-        <div id="header-block"></div>
-        <div class="content" style="float: left; text-align: center; align-items: center; justify-content: center;">
-            <h1>REGULATION</h1>
-           <img src="{{ url_for('static', filename='media/rule.jpg') }}"  width="250">
+
+<head>
+    <title>搶救學分大作戰</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/based.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sidebar.css') }}" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" />
+</head>
+<!-- A place where you shouldn't be. -->
+
+<body>
+    <div id="sidebar-block"></div>
+    <div id="header-block"></div>
+    <div class="content" style="float: left; text-align: center; align-items: center; justify-content: center;">
+        <h1>REGULATION</h1>
+        <img src="{{ url_for('static', filename='media/rule.jpg') }}" width="250">
 
 
 
         <script src="{{ url_for('static', filename='js/content.js') }}"></script>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>

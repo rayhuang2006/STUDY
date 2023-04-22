@@ -1,43 +1,48 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>搶救學分大作戰</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/based.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/sidebar.css') }}" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles/scoreboard.css') }}">
-    </head>
-    <!-- A place where you shouldn't be. -->
-    <body>
-        <div id="sidebar-block"></div>
-        <div id="header-block"></div>
-        <div class="content" style="float: left; text-align: center; align-items: center; justify-content: center;">
-        
+
+<head>
+    <title>搶救學分大作戰</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/based.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/sidebar.css') }}" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/scoreboard.css') }}">
+</head>
+<!-- A place where you shouldn't be. -->
+
+<body>
+    <div id="sidebar-block"></div>
+    <div id="header-block"></div>
+    <div class="content" style="float: left; text-align: center; align-items: center; justify-content: center;">
+
         <!-- The Scoreboard itself-->
         <div class="about">
-		<h3>SCOREBOARD</h3>
+            <h3>SCOREBOARD</h3>
+            <button id="btnRefresh">Refresh</button>
         </div>
 
-		<div class="table">
-			<div class="table-header">
-			<div class="header_item"><a id="class" class="filter_link filter_link-number" href="#">class</a></div>
-			<div class="header_item name"><a id="sn" class="filter_link" href="#"> seat number</a></div>
-			<div class="header_item title"><a id="name" class="filter_link" href="#">name</a></div>
-			<div class="header_item year"><a id="points" class="filter_link" href="#">points</a></div>
-			<div class="header_item"><a id="reason" class="filter_link" href="#">reason</a></div>
-			</div>
-			<div class="table-content" id="target"></div>
-		</div>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-		<script src="{{ url_for('static', filename='js/data.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/scoreboard.css') }}"></script>
-         </div>
+        <div class="table">
+            <div class="table-header">
+                <div class="header_item"><a id="class" class="filter_link filter_link-number" href="#">class</a></div>
+                <div class="header_item name"><a id="date" class="filter_link" href="#">date</a></div>
+                <div class="header_item title"><a id="name" class="filter_link" href="#">name</a></div>
+                <div class="header_item year"><a id="points" class="filter_link" href="#">points</a></div>
+                <div class="header_item"><a id="reason" class="filter_link" href="#">reason</a></div>
+            </div>
+            <div class="table-content" id="target"></div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/scoreboard.js') }}"></script>
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/content.js') }}"></script>
+</body>
 
-        <script src="{{ url_for('static', filename='js/content.js') }}"></script>
-    </body>
 </html>

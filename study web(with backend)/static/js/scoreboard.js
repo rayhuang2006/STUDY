@@ -1,11 +1,41 @@
-function init() {
-    createTable('#target', tableData);
-    drawImg();
-    drawTable();
+function init(data) {
+    createTable('#target', data);
+    //drawImg();
+    drawTable(data);
     addEvent();
 }
+
 $(document).ready(function () {
-    init();
+    var $targetId = $("#target");
+    var $btnRefresh = $("#btnRefresh");
+
+    $.ajax({
+        url: "/getrecord",
+        data: {},
+        type: 'GET',
+        success: function(data){
+            init(data["data"]);
+        },
+        error: function(xhr){
+            alert(xhr);
+        }
+    });
+
+    
+    $btnRefresh.off('click').on('click', function(){
+        $.ajax({
+            url: "/getrecord",
+            data: {},
+            type: 'GET',
+            success: function(data){
+                $targetId.empty();
+                init(data["data"]);
+            },
+            error: function(xhr){
+                alert(xhr);
+            }
+        });
+    });
 });
 
 var properties = ['page', 'name', 'title', 'date', 'genre'];
@@ -110,7 +140,7 @@ function drawImg() {
     }
 }
 
-function drawTable() {
+function drawTable(data) {
     var row = $(".table-row");
     var cell = $(".table-data");
     var rowLng = row.length;
@@ -125,7 +155,8 @@ function drawTable() {
     }
     for (var i = 0; i < rowLng; i++) {
         for (var j = 0; j < cellLng; j++) {
-            row[i].getElementsByClassName("table-data")[j].innerHTML = Object.values(tableData[i])[j];
+            row[i].getElementsByClassName("table-data")[j].innerHTML = Object.values(data[i])[j];
+            console.log(Object.values(data[i])[j]);
         }
     }
 }

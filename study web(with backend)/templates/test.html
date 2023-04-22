@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="console"></div>
+    <hr>
+    <button id="btn1">SHOW</button>
+
+    <script>
+        function dataRenderer(idx, data) {
+            var template = "<h2>{idx}. {name} {score}</h2>";
+            var rendered = template.replaceAll("{idx}", idx + "")
+                .replaceAll("{name}", data[1] + "")
+                .replaceAll("{score}", data[2]);
+            return rendered;
+        }
+
+        $(function () {
+            var $btn1 = $("#btn1");
+            var $console = $('#console')
+
+            $btn1.off('click').on('click', function () {
+                $console.empty();
+                $.ajax({
+                    url: '/getrank',
+                    data: {},
+                    type: 'GET',
+                    success: function (data) {
+                        var data_list = data["data"]
+                        var i = 1;
+                        data_list.forEach(element => {
+                            var t = dataRenderer(i, element);
+                            $console.append(t);
+                            i++;
+                        });
+                    },
+                    error: function (xhr) {
+                        alert(xhr.error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
